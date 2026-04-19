@@ -86,6 +86,62 @@ const StrategyView = (() => {
         </div>
       </div>
 
+      <!-- 건국대 전형 비교 테이블 -->
+      <div class="card" style="margin-bottom:var(--space-md);">
+        <div class="card-header">
+          <span class="card-title">건국대 수의과대학 전형 비교</span>
+          <span class="card-badge">참고 대학</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>KU자기추천 (학종)</th>
+                <th>KU지역균형 (교과)</th>
+                <th>정시 (가군)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:600;">수능 최저</td>
+                <td><span class="tag tag-green">없음</span></td>
+                <td><span class="tag tag-gold">3개영역 합 5 이내</span></td>
+                <td><span class="tag tag-cyan">수능 100%</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;">선발 방식</td>
+                <td>1단계: 서류 (3배수)<br>2단계: 서류70+면접30</td>
+                <td>교과70 + 서류30</td>
+                <td>수능 100%</td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;">합격 내신</td>
+                <td class="font-en" style="color:var(--cyan); font-weight:600;">1.5~2.2 등급</td>
+                <td class="font-en" style="color:var(--gold); font-weight:600;">1.1~1.3 등급</td>
+                <td class="text-secondary">-</td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;">핵심 권장과목</td>
+                <td colspan="3"><span class="tag tag-gold">생명과학Ⅱ (필수)</span> &nbsp; <span class="tag tag-cyan">화학Ⅱ</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;">면접</td>
+                <td style="color:var(--red); font-weight:600;">제출 서류 기반 면접</td>
+                <td><span class="tag tag-green">없음</span></td>
+                <td><span class="tag tag-green">없음</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;">추천</td>
+                <td>불필요</td>
+                <td><span class="tag tag-gold">학교장 추천 필수</span></td>
+                <td>불필요</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <!-- 평가 기준 -->
       <div class="card" style="margin-bottom:var(--space-md);">
         <div class="card-header">
