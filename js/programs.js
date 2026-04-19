@@ -7,10 +7,10 @@ const ProgramsView = (() => {
   /* ── 편의 렌더 함수 ─────────────────────── */
   const statusMeta = {
     waiting:   { label: '신청 대기',   color: 'var(--accent-gold)',  icon: '⏳' },
-    applied:   { label: '신청 완료',   color: 'var(--accent-cyan)',  icon: '✅' },
-    accepted:  { label: '합격',        color: 'var(--accent-green)', icon: '🎉' },
-    rejected:  { label: '미선발',      color: 'var(--tag-red)',      icon: '❌' },
-    scheduled: { label: '일정 예정',   color: 'var(--text-muted)',   icon: '📅' },
+    applied:   { label: '신청 완료',   color: 'var(--accent-cyan)',  icon: '' },
+    accepted:  { label: '합격',        color: 'var(--accent-green)', icon: '' },
+    rejected:  { label: '미선발',      color: 'var(--tag-red)',      icon: '' },
+    scheduled: { label: '일정 예정',   color: 'var(--text-muted)',   icon: '' },
   };
 
   const tagColor = {
@@ -82,12 +82,12 @@ const ProgramsView = (() => {
 
         ${prog.requirements ? `
           <div style="margin-top:10px; padding:10px; background:var(--bg-tertiary); border-radius:8px; font-size:12px; color:var(--text-secondary);">
-            <strong style="color:var(--text-primary);">📋 지원 조건/준비물:</strong> ${prog.requirements}
+            <strong style="color:var(--text-primary);"> 지원 조건/준비물:</strong> ${prog.requirements}
           </div>` : ''}
 
         ${prog.memo ? `
           <div style="margin-top:8px; padding:8px 10px; background:var(--accent-gold)11; border-radius:8px; font-size:12px; color:var(--accent-gold);">
-            💡 ${prog.memo}
+             ${prog.memo}
           </div>` : ''}
 
         <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
@@ -132,7 +132,7 @@ const ProgramsView = (() => {
 
     const emptyHtml = `
       <div class="card" style="text-align:center; padding:var(--space-2xl); color:var(--text-muted);">
-        <div style="font-size:48px; margin-bottom:var(--space-md);">📋</div>
+        <div style="font-size:48px; margin-bottom:var(--space-md);"></div>
         <div>등록된 프로그램이 없습니다.</div>
         <button class="btn btn-primary" style="margin-top:var(--space-lg);" onclick="ProgramsView.showAddModal()">프로그램 추가</button>
       </div>

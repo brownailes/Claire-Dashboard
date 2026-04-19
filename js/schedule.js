@@ -22,8 +22,8 @@ const ScheduleView = (() => {
       </div>
 
       <div class="tab-nav">
-        <button class="tab-item ${currentTab === 'weekly' ? 'active' : ''}" onclick="ScheduleView.setTab('weekly')">📅 주간 시간표</button>
-        <button class="tab-item ${currentTab === 'academies' ? 'active' : ''}" onclick="ScheduleView.setTab('academies')">🏫 학원 관리</button>
+        <button class="tab-item ${currentTab === 'weekly' ? 'active' : ''}" onclick="ScheduleView.setTab('weekly')"> 주간 시간표</button>
+        <button class="tab-item ${currentTab === 'academies' ? 'active' : ''}" onclick="ScheduleView.setTab('academies')"> 학원 관리</button>
       </div>
 
       ${currentTab === 'weekly' ? renderWeekly() : renderAcademies()}
@@ -37,7 +37,7 @@ const ScheduleView = (() => {
     if (schedules.length === 0) {
       return `
         <div class="card">
-          ${Components.emptyState('📅', '등록된 주간 일정이 없습니다.', '<button class="btn btn-primary btn-sm" onclick="ScheduleView.showAddSchedule()">일정 추가하기</button>')}
+          ${Components.emptyState('', '등록된 주간 일정이 없습니다.', '<button class="btn btn-primary btn-sm" onclick="ScheduleView.showAddSchedule()">일정 추가하기</button>')}
         </div>
       `;
     }
@@ -153,7 +153,7 @@ const ScheduleView = (() => {
     if (academies.length === 0) {
       return `
         <div class="card">
-          ${Components.emptyState('🏫', '등록된 학원이 없습니다.', '<button class="btn btn-primary btn-sm" onclick="ScheduleView.showAddAcademy()">학원 추가하기</button>')}
+          ${Components.emptyState('', '등록된 학원이 없습니다.', '<button class="btn btn-primary btn-sm" onclick="ScheduleView.showAddAcademy()">학원 추가하기</button>')}
         </div>
       `;
     }
@@ -163,12 +163,12 @@ const ScheduleView = (() => {
     return `
       <div class="stat-grid" style="margin-bottom:var(--space-md);">
         <div class="stat-card gold">
-          <div class="stat-icon">🏫</div>
+          <div class="stat-icon"></div>
           <div class="stat-value font-en">${academies.length}</div>
           <div class="stat-label">등록 학원 수</div>
         </div>
         <div class="stat-card cyan">
-          <div class="stat-icon">💰</div>
+          <div class="stat-icon"></div>
           <div class="stat-value font-en">${Components.formatNumber(totalCost)}</div>
           <div class="stat-label">월 학원비 (원)</div>
         </div>
@@ -243,10 +243,10 @@ const ScheduleView = (() => {
         <div class="form-group">
           <label class="form-label">유형</label>
           <select class="form-input" id="sch-type">
-            <option value="school" ${s.type === 'school' ? 'selected' : ''}>🏫 학교</option>
-            <option value="academy" ${s.type === 'academy' ? 'selected' : ''}>📚 학원</option>
-            <option value="study" ${s.type === 'study' ? 'selected' : ''}>✍️ 자습</option>
-            <option value="other" ${s.type === 'other' ? 'selected' : ''}>🌐 기타</option>
+            <option value="school" ${s.type === 'school' ? 'selected' : ''}> 학교</option>
+            <option value="academy" ${s.type === 'academy' ? 'selected' : ''}> 학원</option>
+            <option value="study" ${s.type === 'study' ? 'selected' : ''}>️ 자습</option>
+            <option value="other" ${s.type === 'other' ? 'selected' : ''}> 기타</option>
           </select>
         </div>
         <div class="form-group">

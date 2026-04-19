@@ -130,7 +130,7 @@ const DashboardView = (() => {
       });
 
       if (labels.length === 0) {
-        canvas.parentElement.innerHTML = Components.emptyState('📉', '아직 차트로 분석할 시험 점수 데이터가 부족합니다.');
+        canvas.parentElement.innerHTML = Components.emptyState('', '아직 차트로 분석할 시험 점수 데이터가 부족합니다.');
         return;
       }
 

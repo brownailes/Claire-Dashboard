@@ -7,12 +7,12 @@ const PortfolioView = (() => {
 
   const CATEGORIES = [
     { key: 'all', label: '전체', icon: '📁' },
-    { key: 'sespec', label: '세특', icon: '🔬' },
-    { key: 'volunteer', label: '봉사활동', icon: '🏥' },
-    { key: 'club', label: '동아리', icon: '🎭' },
+    { key: 'sespec', label: '세특', icon: '' },
+    { key: 'volunteer', label: '봉사활동', icon: '' },
+    { key: 'club', label: '동아리', icon: '' },
     { key: 'competition', label: '공모전/대회', icon: '🏆' },
-    { key: 'reading', label: '독서', icon: '📖' },
-    { key: 'other', label: '기타활동', icon: '🌐' },
+    { key: 'reading', label: '독서', icon: '' },
+    { key: 'other', label: '기타활동', icon: '' },
   ];
 
   function render() {
@@ -50,17 +50,17 @@ const PortfolioView = (() => {
       <!-- Category Stats -->
       <div class="stat-grid" style="margin-bottom:var(--space-md);">
         <div class="stat-card cyan">
-          <div class="stat-icon">🔬</div>
+          <div class="stat-icon"></div>
           <div class="stat-value font-en">${counts['sespec'] || 0}</div>
           <div class="stat-label">세특 기록</div>
         </div>
         <div class="stat-card green">
-          <div class="stat-icon">🏥</div>
+          <div class="stat-icon"></div>
           <div class="stat-value font-en">${counts['volunteer'] || 0}</div>
           <div class="stat-label">봉사활동</div>
         </div>
         <div class="stat-card purple">
-          <div class="stat-icon">🎭</div>
+          <div class="stat-icon"></div>
           <div class="stat-value font-en">${counts['club'] || 0}</div>
           <div class="stat-label">동아리</div>
         </div>

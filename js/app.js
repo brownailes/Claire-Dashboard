@@ -153,9 +153,9 @@ const JarvisApp = (() => {
 
         <h4 style="font-size:14px; color:var(--text-secondary); margin:var(--space-lg) 0 var(--space-md);">데이터 관리</h4>
         <div style="display:flex; gap:var(--space-sm); flex-wrap:wrap;">
-          <button class="btn btn-secondary btn-sm" onclick="JarvisData.exportJSON()">📤 JSON 내보내기</button>
+          <button class="btn btn-secondary btn-sm" onclick="JarvisData.exportJSON()"> JSON 내보내기</button>
           <label class="btn btn-secondary btn-sm" style="cursor:pointer;">
-            📥 JSON 가져오기
+             JSON 가져오기
             <input type="file" accept=".json" style="display:none;" onchange="Components.handleImport(event)">
           </label>
         </div>

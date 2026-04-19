@@ -42,10 +42,10 @@ const Components = (() => {
       warning: 'var(--gold)',
     };
     const icons = {
-      success: '✓',
-      error: '✕',
+      success: '',
+      error: '',
       info: 'ℹ',
-      warning: '⚠',
+      warning: '',
     };
 
     const toast = document.createElement('div');
@@ -168,10 +168,10 @@ const Components = (() => {
   function dataBar() {
     return `
       <div class="data-bar">
-        <span class="data-bar-label">💾 데이터 동기화</span>
-        <button class="btn btn-sm btn-secondary" onclick="JarvisData.exportJSON()">📤 내보내기</button>
+        <span class="data-bar-label"> 데이터 동기화</span>
+        <button class="btn btn-sm btn-secondary" onclick="JarvisData.exportJSON()"> 내보내기</button>
         <label class="btn btn-sm btn-secondary" style="cursor:pointer;">
-          📥 가져오기
+           가져오기
           <input type="file" accept=".json" style="display:none;" onchange="Components.handleImport(event)">
         </label>
       </div>

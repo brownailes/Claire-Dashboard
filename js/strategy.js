@@ -16,9 +16,9 @@ const StrategyView = (() => {
       </div>
 
       <div class="tab-nav">
-        <button class="tab-item ${currentTab === 'overview' ? 'active' : ''}" onclick="StrategyView.setTab('overview')">📋 전형 분석</button>
-        <button class="tab-item ${currentTab === 'highschool' ? 'active' : ''}" onclick="StrategyView.setTab('highschool')">🏫 고교 전략</button>
-        <button class="tab-item ${currentTab === 'memo' ? 'active' : ''}" onclick="StrategyView.setTab('memo')">📝 전략 메모</button>
+        <button class="tab-item ${currentTab === 'overview' ? 'active' : ''}" onclick="StrategyView.setTab('overview')"> 전형 분석</button>
+        <button class="tab-item ${currentTab === 'highschool' ? 'active' : ''}" onclick="StrategyView.setTab('highschool')"> 고교 전략</button>
+        <button class="tab-item ${currentTab === 'memo' ? 'active' : ''}" onclick="StrategyView.setTab('memo')"> 전략 메모</button>
       </div>
 
       ${currentTab === 'overview' ? renderOverview() : ''}
@@ -71,7 +71,7 @@ const StrategyView = (() => {
               </tr>
               <tr>
                 <td style="font-weight:600;">면접</td>
-                <td style="color:var(--red); font-weight:600;">⚠ 합불 결정적 변수</td>
+                <td style="color:var(--red); font-weight:600;"> 합불 결정적 변수</td>
                 <td>인성 + 적성</td>
                 <td>적성·인성 (결격 판단)</td>
               </tr>
@@ -154,13 +154,13 @@ const StrategyView = (() => {
             '성적 추이 (향상도)',
             '학업 심화 탐구 과정',
           ], 'cyan')}
-          ${evalCard('📚', '학업태도', '스스로 알고자 하며 적극적으로 배우고자 하는가?', [
+          ${evalCard('', '학업태도', '스스로 알고자 하며 적극적으로 배우고자 하는가?', [
             '자기주도적 학습 경험',
             '전공 관련 과목 선택',
             '수업 참여 적극성',
             '세특에 드러난 탐구 과정',
           ], 'green')}
-          ${evalCard('🤝', '학업 외 소양', '바른 인성과 공동체 의식을 갖추고 있는가?', [
+          ${evalCard('', '학업 외 소양', '바른 인성과 공동체 의식을 갖추고 있는가?', [
             '리더십과 책임감',
             '봉사 및 나눔 실천',
             '공동체 기여 활동',
@@ -189,8 +189,8 @@ const StrategyView = (() => {
         </div>
         <div style="display:grid; gap:var(--space-md);">
           ${insightItem('', '전략적 심화 과목 이수 & 세특 관리', '내신 변별력 약화로 학생부 세특 중심의 정성평가가 합격을 완전히 좌우합니다. 수능 출제 범위에서 빠지더라도 미적분, 생명과학Ⅱ, 화학Ⅱ 등 수의학 핵심 권장과목을 학교에서 반드시 수강해 탐구 역량을 증명하십시오.', 'cyan')}
-          ${insightItem('📈', '수능 최저학력기준 대폭 강화 대비', '통합 수능과 내신 5등급제 도입으로 최상위권의 동점자가 속출합니다. 변별력 확보를 위해 수능 최저를 신설하거나 대폭 높일 것이므로 전 과목 원점수 및 1등급 방어가 필수적입니다.', 'red')}
-          ${insightItem('🗣', '다중미니면접(MMI) 집중 훈련 시스템', '상위권 대학은 성적 한계를 보완하기 위해 심층 면접 비중을 극대화합니다. 서울대 예시처럼 정시 일반전형에도 MMI 면접(20점)이 신규 도입되므로 딜레마 상황, 커뮤니케이션, 생명윤리에 대한 지속적 훈련이 필요합니다.', 'gold')}
+          ${insightItem('', '수능 최저학력기준 대폭 강화 대비', '통합 수능과 내신 5등급제 도입으로 최상위권의 동점자가 속출합니다. 변별력 확보를 위해 수능 최저를 신설하거나 대폭 높일 것이므로 전 과목 원점수 및 1등급 방어가 필수적입니다.', 'red')}
+          ${insightItem('', '다중미니면접(MMI) 집중 훈련 시스템', '상위권 대학은 성적 한계를 보완하기 위해 심층 면접 비중을 극대화합니다. 서울대 예시처럼 정시 일반전형에도 MMI 면접(20점)이 신규 도입되므로 딜레마 상황, 커뮤니케이션, 생명윤리에 대한 지속적 훈련이 필요합니다.', 'gold')}
           ${insightItem('🎯', '정시 전형에서도 학교생활(교과역량) 유지', '더 이상 정시가 수능 100%로 결정되지 않습니다. 수능 60점 + 교과역량평가 40점으로 선발하는 기조가 강하므로, 수능만 믿고 수시를 포기하거나 자퇴 후 검정고시를 응시하는 전략은 치명적입니다.', 'green')}
           ${insightItem('🇬🇧', '원어민급 영어 실력의 합법적 생기부 활용', '외부 공인 어학 성적 기재가 전면 금지되었으므로, [고급 영어] 선택 등 교과 세특을 우회 활용해야 합니다. 해외 최신 수의학/바이러스학 영문 SCI급 논문을 직접 번역 없이 리서치하고 발표하는 심화 탐구 사례가 서울대 학종합격의 핵심 킬러 무기가 됩니다.', 'purple')}
         </div>
@@ -317,7 +317,7 @@ const StrategyView = (() => {
           <div class="card">
             <div class="card-header">
               <span class="card-title">
-                ${m.category === 'consultation' ? '🗣' : m.category === 'analysis' ? '📊' : '📝'}
+                ${m.category === 'consultation' ? '' : m.category === 'analysis' ? '📊' : ''}
                 ${m.title}
               </span>
               <div style="display:flex; align-items:center; gap:var(--space-sm);">
@@ -369,8 +369,8 @@ const StrategyView = (() => {
       <div class="form-group">
         <label class="form-label">분류</label>
         <select class="form-input" id="memo-category">
-          <option value="general" ${m.category === 'general' ? 'selected' : ''}>📝 일반 메모</option>
-          <option value="consultation" ${m.category === 'consultation' ? 'selected' : ''}>🗣 상담 기록</option>
+          <option value="general" ${m.category === 'general' ? 'selected' : ''}> 일반 메모</option>
+          <option value="consultation" ${m.category === 'consultation' ? 'selected' : ''}> 상담 기록</option>
           <option value="analysis" ${m.category === 'analysis' ? 'selected' : ''}>📊 분석 노트</option>
         </select>
       </div>
